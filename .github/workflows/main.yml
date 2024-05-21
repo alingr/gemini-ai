@@ -15,11 +15,3 @@ jobs:
         with:
           java-version: 11
       - run: mvn test
-
-      - name: Download test results
-        uses: actions/download-artifact@v2
-        with:
-          name: test-results
-
-      - name: Show test results
-        run: cat test-results/TEST-*
