@@ -3,7 +3,7 @@ name: Run Java tests on push to master
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   test:
