@@ -38,4 +38,17 @@ public class RestAssuredTest {
                 .statusCode(200) // Verify successful response (200 OK)
                 .log().body(); // Log the response body for debugging
     }
+
+    @Test
+    public void testGetSinglePost() {
+
+        // Send GET request to retrieve all posts
+        RestAssured.given()
+                .accept(ContentType.JSON) // Specify expected response content type
+                .when()
+                .get("https://jsonplaceholder.typicode.com/posts/1")
+                .then()
+                .statusCode(200) // Verify successful response (200 OK)
+                .log().body(); // Log the response body for debugging
+    }
 }
